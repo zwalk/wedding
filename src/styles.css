@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+html {
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 47%, rgba(156,255,237,1) 58%, rgba(147,233,190,1) 100%);
+    background-repeat: no-repeat;
+    scroll-behavior: smooth;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    margin-right: 5%;
+    cursor: pointer;
+}
+
+nav p {
+    font-family: 'Permanent Marker', cursive;
+    margin-right: 15%;
+    font-size: 1.5rem;
+}
+
+nav {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    display: flex;
+    align-items: center;
+}
+
+.fixed {
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding-left: 5%;
+    background-color: #93e9be;
+}
+
+.nav-fix {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+}

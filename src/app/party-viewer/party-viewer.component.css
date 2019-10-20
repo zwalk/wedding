@@ -1,0 +1,10 @@
+.tile {
+    border: solid 2px;
+    width: 50%;
+    margin: 0 auto;
+    align-items: center;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}

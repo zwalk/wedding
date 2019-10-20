@@ -1,0 +1,3 @@
+<div class="bridesmaids" id="bridesmaids">
+    <img *ngFor="let person of people" src="{{person.imgSrc}}" [ngStyle]="{'width': getSize(person)}" (click)="select(person)"/>
+</div>
