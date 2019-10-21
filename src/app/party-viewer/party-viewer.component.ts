@@ -133,7 +133,7 @@ export class PartyViewerComponent implements OnInit {
 
   select(person: Person) {
     this.selectedPerson = person;
-    document.querySelector('.tile').innerHTML = "<img src='" + person.imgSrc + `' style='width: ${person.detailSize}'/>`
+    document.querySelector('.tile').innerHTML = "<img src='" + person.imgSrc + `' style='width: ${person.detailSize}; max-height: 600px'/>`
     + `<p style="width: 50%; margin-left: 3%; margin-right: 3%;"><b>${person.name}</b>` + "</br>" 
     + `<i>${person.relation}</i></br>` + `${person.description}</p>`;
   }
