@@ -24,32 +24,25 @@ nav a {
 
 nav p {
     font-family: 'Permanent Marker', cursive;
-    margin-right: 15%;
+    margin-left: 2%;
     font-size: 1.5rem;
 }
 
 nav {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-    margin-top: 2.5%;
-    margin-bottom: 2.5%;
     display: flex;
     align-items: center;
-}
-
-.fixed {
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    justify-content: space-between;
     position: fixed;
-    width: 100%;
-    left: 0;
-    right: 0;
-    padding-left: 5%;
-    background-color: #93e9be;
+    top: 0;
+    background-color: #93eac0;
 }
 
-.nav-fix {
-    margin-top: 0;
-    margin-bottom: 0;
-    width: 100%;
+nav div {
+    flex: 3;
+    display: flex;
+    justify-content: flex-end;
 }

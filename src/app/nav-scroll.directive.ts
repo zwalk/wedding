@@ -6,9 +6,9 @@ import { Directive, HostListener } from '@angular/core';
 export class NavScrollDirective {
 
   @HostListener('click', ['$event']) scrollToDivOnClick(event: any) {
-    let element = document.getElementById(event.target.innerText.toLowerCase());
+    const element = document.getElementById(event.target.innerText.toLowerCase());
 
-    const navHeight = document.querySelector('.nav-container').scrollHeight;
+    const navHeight = document.querySelector('nav').scrollHeight;
     window.scrollTo({top: (element.getBoundingClientRect().top - document.body.getBoundingClientRect().top) - navHeight});
   }
 

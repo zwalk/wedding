@@ -8,3 +8,13 @@
     justify-content: center;
     margin-top: 6%;
 }
+
+#detail {
+    width: 50%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.tile img {
+    max-height: 600px;
+}

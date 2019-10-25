@@ -11,6 +11,7 @@ img {
     display: flex;
     justify-content: space-around;
     background-color: #242424;
+    margin-top: 5%;
 }
 
 .banner img {
