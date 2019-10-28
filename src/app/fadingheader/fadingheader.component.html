@@ -2,12 +2,27 @@
     <p>Chris & Miranda</p>
     <div>
         <a appNavScroll>Home</a>
-        <a appNavScroll>About</a>
+        <a appNavScroll>Info</a>
         <a appNavScroll>Bridesmaids</a>
         <a appNavScroll>Groomsmen</a>
         <a appNavScroll>Dogs</a>
-        <a appNavScroll>Events</a>
-        <a appNavScroll>Gifts</a>
         <a appNavScroll>RSVP</a>
     </div>
+    <div class="hamburger" *ngIf="isOpen === false" (click)="changeOpen()">
+        <div class="bar-one"></div>
+        <div class="bar-two"></div>
+        <div class="bar-three"></div>
+    </div>
+    <div class="hamburger close" *ngIf="isOpen === true" (click)="changeOpen()">
+        <div class="bar-one"></div>
+        <div class="bar-three"></div>
+    </div>
 </nav>
+<div class="hamburger-menu" *ngIf="isOpen === true" (click)="changeOpen()">
+    <a appNavScroll>Home</a>
+    <a appNavScroll>Info</a>
+    <a appNavScroll>Bridesmaids</a>
+    <a appNavScroll>Groomsmen</a>
+    <a appNavScroll>Dogs</a>
+    <a appNavScroll>RSVP</a>
+</div>

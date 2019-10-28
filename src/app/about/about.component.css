@@ -1,0 +1,120 @@
+.about-events-gifts-container {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    color: #fff;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.about-container {
+    flex-basis: 55%;
+    background-color: #003366;
+}
+
+.about-container h2 {
+    font-family: 'Permanent Marker', cursive;
+    padding: 10%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    font-size: small;
+}
+
+.about-container p {
+    padding: 10%;
+    padding-bottom: 8%;
+    padding-top: 5%;
+    font-size: x-small;
+}
+
+.event-container {
+    background-color: #003366;
+    flex-basis: 41%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    justify-content: space-evenly;
+    border-left: dotted white 1px;
+    padding: 2%;
+}
+
+.event-container h2 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: small;
+}
+
+.about-img-container {
+    display: none;
+}
+
+.event-container h4 {
+    text-decoration: underline dotted;
+    font-size: x-small;
+}
+
+.event-container p {
+    font-size: x-small;
+}
+
+.event-container a {
+    color: cornflowerblue;
+    font-size: x-small;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .about-container h2, .event-container h2 {
+        font-size: larger;
+    }
+
+    .about-container p, .event-container p, .event-container a, .event-container h4 {
+        font-size: small;
+    }
+
+}
+
+@media only screen and (min-width: 996px) {
+
+    .about-img-container {
+        flex-basis: 40%;
+        align-content: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .about-container {
+        flex-basis: 25%;
+    }
+
+    .about-container h2 {
+        font-size: inherit;
+    }
+
+    .about-container p {
+        font-size: inherit;
+    }
+
+    .event-container {
+        border: none;
+        flex-basis: 25%;
+        padding: 0;
+    }
+
+    .event-container h2 {
+        font-size: inherit;
+    }
+
+    .event-container h4 {
+        font-size: inherit;
+    }
+
+    .event-container p {
+        font-size: inherit;
+    }
+
+    .event-container a {
+        font-size: inherit;
+    }
+}

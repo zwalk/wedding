@@ -9,6 +9,8 @@ import { NavScrollDirective } from './nav-scroll.directive';
 import { NavFixDirective } from './nav-fix.directive';
 import { PartyViewerComponent } from './party-viewer/party-viewer.component';
 import { FadingheaderComponent } from './fadingheader/fadingheader.component';
+import { AboutComponent } from './about/about.component';
+import { DogsComponent } from './dogs/dogs.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { FadingheaderComponent } from './fadingheader/fadingheader.component';
     NavScrollDirective,
     NavFixDirective,
     PartyViewerComponent,
-    FadingheaderComponent
+    FadingheaderComponent,
+    AboutComponent,
+    DogsComponent
   ],
   imports: [
     BrowserModule,

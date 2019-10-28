@@ -35,6 +35,7 @@ enum VisibilityState {
 export class FadingheaderComponent implements AfterViewInit {
 
   private isVisible = true;
+  isOpen = false;
 
 @HostBinding('@toggle')
 get toggle(): VisibilityState {
@@ -63,7 +64,14 @@ get toggle(): VisibilityState {
 
     scrollUp$.subscribe(() => this.isVisible = true);
 
-    scrollDown$.subscribe(() => this.isVisible = false);
+    scrollDown$.subscribe(() => {
+      this.isVisible = false;
+      this.isOpen = false;
+    });
+  }
+
+  changeOpen(): void {
+    this.isOpen = !this.isOpen;
   }
 
 }

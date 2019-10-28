@@ -1,0 +1,127 @@
+:host {
+    display: block;
+    background-color: #242424;
+    padding-bottom: 5%;
+    -webkit-clip-path: polygon(0 3%, 100% 0, 100% 96%, 0 100%);
+    clip-path: polygon(0 3%, 100% 0, 100% 96%, 0 100%);
+}
+
+.dog-container {
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: 2px black dashed;
+    height: 200px;
+}
+
+.dog-container img {
+    flex-basis: 60%;
+    margin-right: 3%;
+}
+
+h1 {
+    margin-top: 5%;
+    text-align: center;
+    color: #fff;
+    padding-top: 2%;
+    margin-bottom: 2%;
+    font-family: 'Permanent Marker', cursive;
+    font-size: large;
+}
+
+.dog-info-container {
+    flex-basis: 65%;
+    margin-right: 2%;
+}
+
+.dog-info-container:nth-child(1) {
+    margin-left: 3%;
+    flex-basis: 70%;
+    margin-right: 0;
+}
+
+.dog-container img:nth-child(2) {
+    flex-basis: 67%;
+}
+
+.border-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: .5%;
+    background-color: #fff;
+    border-radius: 10%;
+    margin-bottom: 5%;
+}
+
+.nicknames {
+    font-size: small;
+}
+
+h3 {
+    font-size: medium;
+}
+
+.dog-info-container p {
+    font-size: x-small;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .dog-info-container h3 {
+        font-size: x-large
+    }
+
+    .dog-info-container p {
+        font-size: small;
+    }
+
+    h1 {
+        font-size: x-large;
+    }
+
+    .nicknames {
+        width: 107%;
+    }
+
+    .bo-container img {
+        flex-basis: 30% !important;
+    }
+
+
+}
+
+@media only screen and (min-width: 996px) {
+
+    h1 {
+        font-size: xx-large;
+    }
+
+    .border-container {
+        width: 55%;
+    }
+
+    .dog-container img {
+        flex-basis: 30%;
+        margin-right: 2%;
+    }
+
+    .dog-info-container {
+        margin-right: 0;
+    }
+
+    h3 {
+        font-size: medium;
+    }
+
+    .dog-info-container p {
+        font-size: small;
+    }
+
+    .dog-container img:nth-child(2) {
+        flex-basis: 55%;
+    }
+}

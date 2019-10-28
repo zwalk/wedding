@@ -9,3 +9,8 @@
     width: 15%;
     align-self: flex-end;
 }
+
+.bridesmaids img:hover {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
