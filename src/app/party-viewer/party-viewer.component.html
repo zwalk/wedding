@@ -3,6 +3,7 @@
 <div class="tile" *ngIf="selectedPerson != null">
     <img src="{{selectedPerson.imgSrc}}" [ngStyle]="{'width': getDetailSize(selectedPerson)}"/>
     <p id="detail"><b>{{selectedPerson.name}}</b><br>
+        <i class="person-nicknames" *ngIf="selectedPerson.nicknames != null">{{selectedPerson.nicknames}}</i><br *ngIf="selectedPerson.nicknames != null">
         <i>{{selectedPerson.relation}}</i><br>
         {{selectedPerson.description}}</p>
     </div>

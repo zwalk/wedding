@@ -19,7 +19,7 @@
 }
 
 .dog-container img {
-    flex-basis: 60%;
+    width: 60%;
     margin-right: 3%;
 }
 
@@ -45,7 +45,7 @@ h1 {
 }
 
 .dog-container img:nth-child(2) {
-    flex-basis: 67%;
+    width: 67%;
 }
 
 .border-container {
@@ -88,7 +88,7 @@ h3 {
     }
 
     .bo-container img {
-        flex-basis: 30% !important;
+        width: 30% !important;
     }
 
 
@@ -105,7 +105,7 @@ h3 {
     }
 
     .dog-container img {
-        flex-basis: 30%;
+        width: 30%;
         margin-right: 2%;
     }
 
@@ -122,6 +122,6 @@ h3 {
     }
 
     .dog-container img:nth-child(2) {
-        flex-basis: 55%;
+        width: 55%;
     }
 }

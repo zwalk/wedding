@@ -3,6 +3,7 @@
     margin: 0 auto;
     display: flex;
     cursor: pointer;
+    justify-content: space-evenly;
 }
 
 .bridesmaids img {

@@ -11,6 +11,7 @@ import { PartyViewerComponent } from './party-viewer/party-viewer.component';
 import { FadingheaderComponent } from './fadingheader/fadingheader.component';
 import { AboutComponent } from './about/about.component';
 import { DogsComponent } from './dogs/dogs.component';
+import { RingbearerComponent } from './ringbearer/ringbearer.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { DogsComponent } from './dogs/dogs.component';
     PartyViewerComponent,
     FadingheaderComponent,
     AboutComponent,
-    DogsComponent
+    DogsComponent,
+    RingbearerComponent
   ],
   imports: [
     BrowserModule,
