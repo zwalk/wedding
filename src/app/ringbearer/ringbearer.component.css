@@ -3,6 +3,7 @@ h2 {
     margin-top: 5%;
     text-decoration: underline dotted;
     font-size: large;
+    font-family: 'Permanent Marker', cursive;
 }
 
 p {
@@ -46,7 +47,7 @@ img {
     }
 
     h2 {
-        font-size: x-large;
+        font-size: xx-large;
     }
 
 }

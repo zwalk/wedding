@@ -19,7 +19,7 @@
 }
 
 .dog-container img {
-    width: 60%;
+    width: 47%;
     margin-right: 3%;
 }
 
@@ -34,18 +34,18 @@ h1 {
 }
 
 .dog-info-container {
-    flex-basis: 65%;
+    width: 65%;
     margin-right: 2%;
 }
 
 .dog-info-container:nth-child(1) {
     margin-left: 3%;
-    flex-basis: 70%;
+    width: 70%;
     margin-right: 0;
 }
 
 .dog-container img:nth-child(2) {
-    width: 67%;
+    width: 43%;
 }
 
 .border-container {
