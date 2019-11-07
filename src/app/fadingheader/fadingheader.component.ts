@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, HostBinding } from '@angular/core';
+import { Component, AfterViewInit, HostBinding, OnInit } from '@angular/core';
 import { fromEvent } from 'rxjs';
 import { throttleTime, map, pairwise, distinctUntilChanged, share, filter } from 'rxjs/operators';
 import { trigger, style, state, transition, animate } from '@angular/animations';
@@ -32,10 +32,11 @@ enum VisibilityState {
   ]
 })
 
-export class FadingheaderComponent implements AfterViewInit {
+export class FadingheaderComponent implements AfterViewInit, OnInit {
 
   private isVisible = true;
   isOpen = false;
+  isIEOrEdge: boolean;
 
 @HostBinding('@toggle')
 get toggle(): VisibilityState {
@@ -43,6 +44,10 @@ get toggle(): VisibilityState {
 }
 
   constructor() { }
+
+  ngOnInit() {
+    this.isIEOrEdge = /msie\s|trident\/|edge\//i.test(window.navigator.userAgent);
+  }
 
   ngAfterViewInit() {
     const scroll$ = fromEvent(window, 'scroll').pipe(
@@ -72,6 +77,10 @@ get toggle(): VisibilityState {
 
   changeOpen(): void {
     this.isOpen = !this.isOpen;
+  }
+
+  closeWarning(): void {
+    this.isIEOrEdge = false;
   }
 
 }

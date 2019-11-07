@@ -1,0 +1,16 @@
+.browser-warning {
+    position: fixed;
+    top: 7.5%;
+    background-color: yellow;
+    font-weight: bold;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 1;
+    display: flex;
+    padding-left: 2%;
+}
+
+.browser-warning p {
+    margin-right: 3%;
+    cursor: pointer;
+}
