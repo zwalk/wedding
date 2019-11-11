@@ -1,30 +1,45 @@
-<nav>
-    <p>Chris & Miranda</p>
-    <div>
-        <a appNavScroll>Home</a>
-        <a appNavScroll>Info</a>
-        <a appNavScroll>Bridesmaids</a>
-        <a appNavScroll>Groomsmen</a>
-        <a appNavScroll>Ring Bearers</a>
-        <a appNavScroll>Dogs</a>
-        <a href="https://forms.gle/6FRdN2QAYK4BTdex8" target="_blank">RSVP</a>
+<div class="nav-container">
+    <nav>
+        <p>Chris & Miranda</p>
+        <ul>
+                <li [ngClass]="{'active': currentActive === 1}">
+                  <a appNavScroll>Home</a>  
+                </li>
+                <li [ngClass]="{'active': currentActive === 2}">
+                  <a appNavScroll>Info</a>  
+                </li>
+                <li [ngClass]="{'active': currentActive === 3}">
+                  <a appNavScroll>Bridesmaids</a>  
+                </li>
+                <li [ngClass]="{'active': currentActive === 4}">
+                  <a appNavScroll>Groomsmen</a>  
+                </li>
+                <li [ngClass]="{'active': currentActive === 5}">
+                  <a appNavScroll>Ring Bearers</a>  
+                </li>
+                <li [ngClass]="{'active': currentActive === 6}">
+                  <a appNavScroll>Dogs</a>  
+                </li>
+                <li>
+                  <a href="https://forms.gle/6FRdN2QAYK4BTdex8" target="_blank">RSVP</a>  
+                </li>
+            </ul>
+        <div class="hamburger" *ngIf="isOpen === false" (click)="changeOpen()">
+            <div class="bar-one"></div>
+            <div class="bar-two"></div>
+            <div class="bar-three"></div>
+        </div>
+        <div class="hamburger close" *ngIf="isOpen === true" (click)="changeOpen()">
+            &times;
+        </div>
+    </nav>
+    <div *ngIf="isIEOrEdge" class="browser-warning"><span>Please use <a href="https://www.google.com/chrome/" target="_blank">Chrome</a> or <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> for the best experience.</span><p (click)="closeWarning()">X</p></div>
+    <div class="hamburger-menu" *ngIf="isOpen === true" (click)="changeOpen()">
+            <a appNavScroll>Home</a>
+            <a appNavScroll>Info</a>
+            <a appNavScroll>Bridesmaids</a>
+            <a appNavScroll>Groomsmen</a>
+            <a appNavScroll>Dogs</a>
+            <a appNavScroll>RSVP</a>
     </div>
-    <div class="hamburger" *ngIf="isOpen === false" (click)="changeOpen()">
-        <div class="bar-one"></div>
-        <div class="bar-two"></div>
-        <div class="bar-three"></div>
-    </div>
-    <div class="hamburger close" *ngIf="isOpen === true" (click)="changeOpen()">
-        <div class="bar-one"></div>
-        <div class="bar-three"></div>
-    </div>
-</nav>
-<div *ngIf="isIEOrEdge" class="browser-warning"><span>Please use <a href="https://www.google.com/chrome/" target="_blank">Chrome</a> or <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> for the best experience.</span><p (click)="closeWarning()">X</p></div>
-<div class="hamburger-menu" *ngIf="isOpen === true" (click)="changeOpen()">
-    <a appNavScroll>Home</a>
-    <a appNavScroll>Info</a>
-    <a appNavScroll>Bridesmaids</a>
-    <a appNavScroll>Groomsmen</a>
-    <a appNavScroll>Dogs</a>
-    <a appNavScroll>RSVP</a>
 </div>

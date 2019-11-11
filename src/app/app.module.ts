@@ -12,6 +12,7 @@ import { FadingheaderComponent } from './fadingheader/fadingheader.component';
 import { AboutComponent } from './about/about.component';
 import { DogsComponent } from './dogs/dogs.component';
 import { RingbearerComponent } from './ringbearer/ringbearer.component';
+import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { RingbearerComponent } from './ringbearer/ringbearer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AnimateOnScrollModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

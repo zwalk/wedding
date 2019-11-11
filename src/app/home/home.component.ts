@@ -1,4 +1,5 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
+import { AboutComponent } from '../about/about.component';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
   scrollHeight: number;
   isIEOrEdge: boolean;
 
@@ -16,6 +17,9 @@ export class HomeComponent implements OnInit {
   }
 
   constructor() { }
+
+  ngAfterViewInit() {
+  }
 
   ngOnInit() {
   }

@@ -9,6 +9,7 @@
 .bridesmaids img {
     width: 15%;
     align-self: flex-end;
+    cursor: pointer;
 }
 
 .bridesmaids img:hover {

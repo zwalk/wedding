@@ -1,6 +1,4 @@
 .browser-warning {
-    position: fixed;
-    top: 7.5%;
     background-color: yellow;
     font-weight: bold;
     width: 100%;
@@ -13,4 +11,21 @@
 .browser-warning p {
     margin-right: 3%;
     cursor: pointer;
+    padding: 0 2px 0 2px;
+}
+
+.browser-warning p:hover {
+    background: rgba(0,0,0,0.3);
+}
+
+a:hover {
+    background: rgba(25,25,112, 0.3);
+}
+
+.active {
+    background: rgba(25,25,112,0.9);
+}
+
+.active a {
+    color: #fff;
 }

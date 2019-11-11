@@ -1,3 +1,9 @@
+.center * {
+    position: relative;
+    top: 10%;
+    padding: 3%;
+}
+
 .about-events-gifts-container {
     display: flex;
     width: 90%;
@@ -59,11 +65,16 @@
 }
 
 .event-container a {
+    cursor: pointer;
     color: cornflowerblue;
     font-size: x-small;
 }
 
 @media only screen and (min-width: 768px) {
+
+    .center * {
+        top: 5%;
+    }
 
     .about-container h2, .event-container h2 {
         font-size: larger;
@@ -76,6 +87,10 @@
 }
 
 @media only screen and (min-width: 996px) {
+
+    .center * {
+        top: 10%;
+    }
 
     .about-img-container {
         flex-basis: 40%;

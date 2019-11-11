@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, HostBinding, OnInit } from '@angular/core';
+import { Component, AfterViewInit, HostBinding, OnInit, Input, ViewChild, HostListener } from '@angular/core';
 import { fromEvent } from 'rxjs';
 import { throttleTime, map, pairwise, distinctUntilChanged, share, filter } from 'rxjs/operators';
 import { trigger, style, state, transition, animate } from '@angular/animations';
@@ -37,6 +37,46 @@ export class FadingheaderComponent implements AfterViewInit, OnInit {
   private isVisible = true;
   isOpen = false;
   isIEOrEdge: boolean;
+  currentActive: number;
+  @Input() scrollHeight: number;
+  homeHeight: number;
+  aboutHeight: number;
+  bridesmaidsHeight: number;
+  groomsmenHeight: number;
+  ringBearersHeight: number;
+  dogsHeight: number;
+  haveHeightsBeenCalculated = false;
+
+@HostListener('window:scroll')
+checkForActiveComponent() {
+
+  if (!this.haveHeightsBeenCalculated) {
+    this.calculateHeights();
+    this.haveHeightsBeenCalculated = true;
+  }
+
+  if (this.scrollHeight >= this.homeHeight) {
+    this.currentActive = 1;
+  }
+  if (this.scrollHeight + (window.innerHeight / 2) >= this.aboutHeight) {
+    this.currentActive = 2;
+  }
+  if (this.scrollHeight + (window.innerHeight / 2) >= this.bridesmaidsHeight) {
+    this.currentActive = 3;
+  }
+  if (this.scrollHeight + (window.innerHeight / 2) >= this.groomsmenHeight) {
+    this.currentActive = 4;
+  }
+  if (this.scrollHeight + (window.innerHeight / 2) >= this.ringBearersHeight) {
+    this.currentActive = 5;
+  }
+  if (this.scrollHeight + (window.innerHeight / 2) >= this.dogsHeight) {
+    this.currentActive = 6;
+  }
+  if (this.scrollHeight === 0) {
+    this.currentActive = 0;
+  }
+}
 
 @HostBinding('@toggle')
 get toggle(): VisibilityState {
@@ -81,6 +121,16 @@ get toggle(): VisibilityState {
 
   closeWarning(): void {
     this.isIEOrEdge = false;
+  }
+
+  calculateHeights(): void {
+    const pageTop = document.body.getBoundingClientRect().top;
+    this.homeHeight = document.querySelector('#home').getBoundingClientRect().top - pageTop;
+    this.aboutHeight = document.querySelector('#info').getBoundingClientRect().top - pageTop;
+    this.bridesmaidsHeight = document.querySelector('#bridesmaids').getBoundingClientRect().top - pageTop;
+    this.groomsmenHeight = document.querySelector('#groomsmen').getBoundingClientRect().top - pageTop;
+    this.ringBearersHeight = document.querySelector('app-ringbearer').getBoundingClientRect().top - pageTop;
+    this.dogsHeight = document.querySelector('#dogs').getBoundingClientRect().top - pageTop;
   }
 
 }

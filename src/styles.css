@@ -2,6 +2,7 @@
 * {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    cursor: default;
 }
 
 img {
@@ -18,8 +19,9 @@ html {
 nav a {
     text-decoration: none;
     color: #003366;
-    margin-right: 5%;
     cursor: pointer;
+    display: block;
+    padding: 20px 16px;
 }
 
 nav p {
@@ -34,16 +36,19 @@ nav {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    padding-top: 1%;
-    padding-bottom: 1%;
     justify-content: space-between;
-    position: fixed;
-    top: 0;
     background-color: #93eac0;
     z-index: 1;
 }
 
-nav div {
+.nav-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+nav ul {
     display: none;
 }
 
@@ -67,7 +72,6 @@ nav div {
 
 .hamburger-menu {
     position: fixed;
-    top: 3.8%;
     right: 0;
     display: flex;
     flex-direction: column;
@@ -76,6 +80,8 @@ nav div {
     text-align: center;
     border: solid 1px;
     border-top: none;
+    border-right: none;
+    z-index: 1;
 }
 
 .hamburger-menu a {
@@ -90,14 +96,10 @@ nav div {
     border: none;
 }
 
-.close .bar-one {
-    -webkit-transform: rotate(-45deg) translate(0, 0);
-    transform: rotate(-45deg) translate(0, 0);
-}
-
-.close .bar-three {
-    -webkit-transform: rotate(45deg) translate(-25%, -150%);
-    transform: rotate(45deg) translate(-25%,-150%);
+.close {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
 }
 
 footer {
@@ -117,9 +119,8 @@ footer {
         height: 25px;
     }
 
-    .close .bar-three {
-        -webkit-transform: rotate(45deg) translate(-25%, -225%);
-        transform: rotate(45deg) translate(-25%,-225%);
+    .close {
+        font-size: 1.7rem;
     }
 
     footer {
@@ -143,10 +144,15 @@ footer {
         font-size: 1.5rem;
     }
 
-    nav div {
+    nav ul {
         flex: 3;
         display: flex;
         justify-content: flex-end;
+        list-style-type: none;
+    }
+
+    ul li {
+        float: right;
     }
 
     footer {
