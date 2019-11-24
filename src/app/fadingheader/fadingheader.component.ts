@@ -38,7 +38,7 @@ export class FadingheaderComponent implements AfterViewInit, OnInit {
   isOpen = false;
   isIEOrEdge: boolean;
   currentActive: number;
-  @Input() scrollHeight: number;
+  scrollHeight: number;
   homeHeight: number;
   aboutHeight: number;
   bridesmaidsHeight: number;
@@ -49,6 +49,7 @@ export class FadingheaderComponent implements AfterViewInit, OnInit {
 
 @HostListener('window:scroll')
 checkForActiveComponent() {
+  this.calculateScrollHeight();
 
   if (!this.haveHeightsBeenCalculated) {
     this.calculateHeights();
@@ -78,6 +79,12 @@ checkForActiveComponent() {
   }
 }
 
+@HostListener('window:resize')
+onResize() {
+  this.calculateHeights();
+  this.calculateScrollHeight();
+}
+
 @HostBinding('@toggle')
 get toggle(): VisibilityState {
   return this.isVisible ? VisibilityState.Visible : VisibilityState.Hidden;
@@ -90,6 +97,8 @@ get toggle(): VisibilityState {
   }
 
   ngAfterViewInit() {
+    this.calculateScrollHeight();
+
     const scroll$ = fromEvent(window, 'scroll').pipe(
       throttleTime(10),
       map(() => window.pageYOffset),
@@ -131,6 +140,10 @@ get toggle(): VisibilityState {
     this.groomsmenHeight = document.querySelector('#groomsmen').getBoundingClientRect().top - pageTop;
     this.ringBearersHeight = document.querySelector('app-ringbearer').getBoundingClientRect().top - pageTop;
     this.dogsHeight = document.querySelector('#dogs').getBoundingClientRect().top - pageTop;
+  }
+
+  calculateScrollHeight() {
+    this.scrollHeight = window.pageYOffset;
   }
 
 }

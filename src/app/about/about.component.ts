@@ -1,19 +1,17 @@
-import { Component, OnInit, Input, Output, AfterViewInit, EventEmitter, HostListener, ElementRef, HostBinding } from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit, HostListener } from '@angular/core';
 import {
   trigger,
   state,
   style,
   animate,
   transition,
-  query,
-  stagger
 } from '@angular/animations';
 import { throttleTime, map, filter } from 'rxjs/operators';
 import { fromEvent } from 'rxjs';
 
-enum ShowState {
-  show = 'show',
-  hide = 'hide'
+enum VisibilityState {
+  Visible = 'Visible',
+  Hidden = 'Hidden'
 }
 @Component({
   selector: 'app-about',
@@ -21,52 +19,71 @@ enum ShowState {
   styleUrls: ['./about.component.css'],
   animations: [
     trigger('scrollAnimation', [
-      transition('* => *', [
         state(
-          ShowState.hide,
-          style({opacity: 0, transform: 'translateY(-100px)'})
+          VisibilityState.Hidden,
+          style({opacity: 0})
         ),
         state(
-          ShowState.show,
-          style({opacity: 0, transform: 'translateY(-100px)'}),
+          VisibilityState.Visible,
+          style({opacity: 1}),
         ),
-        transition('* => *', animate('250ms ease-in'))
-        // query('.about-container, .event-container', [
-        //   style({opacity: 0, transform: 'translateY(-100px)'}),
-        //   stagger(-30, [
-        //     animate('500ms cubic-bezier(0.35, 0, 0.25, 1)', style({ opacity: 1, transform: 'none' }))
-        //   ])
-        // ])
-      ])
+        transition('* => *', animate('650ms ease-in'))
     ])
   ]
 })
 export class AboutComponent implements OnInit, AfterViewInit {
 
-  @Input() scrollHeight: number;
   isIEOrEdge: boolean;
-  public isShown = false;
+  private isShown = false;
+  aboutPosition: number;
+  private hasAboutPositionBeenFound = false;
+  windowWidth: number;
 
-  @HostBinding('@scrollAnimation')
-  get shownState(): ShowState {
-    return this.isShown ? ShowState.show : ShowState.hide;
+  getToggle(): VisibilityState {
+    return this.isShown ? VisibilityState.Visible : VisibilityState.Hidden;
   }
 
-  constructor() { }
+  constructor() {
+    this.calculateWindowWidth();
+    if (this.windowWidth <= 1024) {
+      this.isShown = true;
+    }
+   }
 
   ngAfterViewInit() {
-    const pageTop = document.body.getBoundingClientRect().top;
-    const aboutPosition = document.querySelector('#info').getBoundingClientRect().top - pageTop;
-    if (!this.isShown) {
-      fromEvent(window, 'scroll').pipe(
+    if (!this.hasAboutPositionBeenFound) {
+      this.calculateAboutPosition();
+    }
+
+    const $animate = fromEvent(window, 'scroll').pipe(
         throttleTime(10),
         map(() => window.pageYOffset),
-        filter(pageY => pageY + (window.innerHeight / 2) >= aboutPosition )).subscribe(() => this.isShown = true);
+        filter(pageY => pageY + (window.innerHeight / 2) >= this.aboutPosition )
+    );
+
+    if (this.aboutPosition != null) {
+      $animate.subscribe(() => this.isShown = true);
     }
+
   }
 
   ngOnInit() {
     this.isIEOrEdge = /msie\s|trident\/|edge\//i.test(window.navigator.userAgent);
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.calculateAboutPosition();
+    this.calculateWindowWidth();
+  }
+
+  calculateAboutPosition() {
+    const aboutBoundingClientRect = document.querySelector('#info').getBoundingClientRect();
+    this.aboutPosition = aboutBoundingClientRect.top + 50;
+  }
+
+  calculateWindowWidth() {
+    this.windowWidth = window.innerWidth;
   }
 
 }

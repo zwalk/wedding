@@ -33,7 +33,7 @@
             &times;
         </div>
     </nav>
-    <div *ngIf="isIEOrEdge" class="browser-warning"><span>Please use <a href="https://www.google.com/chrome/" target="_blank">Chrome</a> or <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> for the best experience.</span><p (click)="closeWarning()">X</p></div>
+    <div *ngIf="isIEOrEdge" class="browser-warning"><span>Please use <a href="https://www.google.com/chrome/" target="_blank">Chrome</a> or <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> for the best experience.</span><p (click)="closeWarning()">&times;</p></div>
     <div class="hamburger-menu" *ngIf="isOpen === true" (click)="changeOpen()">
             <a appNavScroll>Home</a>
             <a appNavScroll>Info</a>

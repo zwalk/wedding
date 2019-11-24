@@ -1,4 +1,4 @@
-<app-bridesmaids [people]="bridesmaids" (selectHero)="select($event)"></app-bridesmaids>
+<app-bridesmaids id="bridesmaids" [people]="bridesmaids" [isBridesmaids]="true" (selectHero)="select($event)"></app-bridesmaids>
 <div class="tile" *ngIf="selectedPerson == null"><p>Select a hero for more info...</p></div>
 <div class="tile" *ngIf="selectedPerson != null">
     <img src="{{selectedPerson.imgSrc}}" [ngStyle]="{'width': getDetailSize(selectedPerson)}"/>
@@ -7,4 +7,4 @@
         <i>{{selectedPerson.relation}}</i><br>
         {{selectedPerson.description}}</p>
     </div>
-<app-bridesmaids id="groomsmen" [people]="groomsmen" (selectHero)="select($event)"></app-bridesmaids>
+<app-bridesmaids id="groomsmen" [people]="groomsmen" [isBridesmaids]="false" (selectHero)="select($event)"></app-bridesmaids>

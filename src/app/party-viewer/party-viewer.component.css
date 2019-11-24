@@ -1,6 +1,6 @@
 .tile {
     border: solid 2px;
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     align-items: center;
     height: 290px;
@@ -10,14 +10,14 @@
 }
 
 .tile p {
-    font-size: small;
+    font-size: x-small;
 }
 
 #detail {
-    width: 75%;
+    width: 55%;
     margin-left: 3%;
     margin-right: 3%;
-    font-size: x-small;
+    font-size: xx-small;
 }
 
 .tile img {
@@ -27,7 +27,7 @@
 @media only screen and (min-width: 768px) {
     
     #detail {
-        font-size: .9rem !important;
+        font-size: small;
     }
 
     b {
@@ -36,8 +36,8 @@
 
     .tile {
         height: 300px;
-        margin-top: 10%;
-        margin-bottom: 8%;
+        margin-top: 12%;
+        margin-bottom: 10%;
     }
 
     .tile p {
@@ -46,13 +46,13 @@
 
 }
 
-@media only screen and (min-width: 996px) {
+@media only screen and (min-width: 1025px) {
 
     .tile {
         width: 55%;
         height: 350px;
         margin-top: 6%;
-        margin-bottom: 2%;
+        margin-bottom: 5%;
     }
 
     .tile p {
@@ -60,7 +60,7 @@
     }
 
     #detail {
-        font-size: inherit;
+        font-size: small;
     }
 
     .person-nicknames {

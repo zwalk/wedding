@@ -16,3 +16,11 @@
     -webkit-transform: rotate(-10deg);
     transform: rotate(-10deg);
 }
+
+.bridesmaids-initial {
+    transform: translateX(100%);
+}
+
+.groomsmen-initial {
+    transform: translateX(-100%);
+}

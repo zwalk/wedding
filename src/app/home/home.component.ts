@@ -1,5 +1,4 @@
-import { Component, OnInit, HostListener, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
-import { AboutComponent } from '../about/about.component';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +7,8 @@ import { AboutComponent } from '../about/about.component';
 })
 
 export class HomeComponent implements OnInit, AfterViewInit {
-  scrollHeight: number;
-  isIEOrEdge: boolean;
 
-  @HostListener('window:scroll')
-  findScrollHeight() {
-    this.scrollHeight = window.pageYOffset;
-  }
+  isIEOrEdge: boolean;
 
   constructor() { }
 

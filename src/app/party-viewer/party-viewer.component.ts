@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, AfterViewInit } from '@angular/core';
 import { Person } from '../person';
+
 
 @Component({
   selector: 'app-party-viewer',
@@ -111,7 +112,7 @@ export class PartyViewerComponent implements OnInit {
     },
     {
       imgSrc: '../../assets/img/sakicaptamerica.png',
-      imgSize: '12%',
+      imgSize: '13%',
       name: 'Ashton (Saki) Gaitanos',
       description: 'Chris and Saki have known each other since elementary school but became closer in High School when their very '
       + 'good mutual friend Ryan Aguire talked them both into running cross-country. Saki and Chris then both attended The Ohio State '
@@ -123,8 +124,8 @@ export class PartyViewerComponent implements OnInit {
       relation: '(Groomsman, Grade school friend of the Groom)'
     },
     {
-      imgSrc: '../../assets/img/stephenironmanfinal.png',
-      imgSize: '12%',
+      imgSrc: '../../assets/img/stephenironmanv3.jpg.png',
+      imgSize: '18%',
       name: 'Stephen Tornero',
       description: 'Stephen is Chris\' older and only brother. Chris has always looked up to Stephen as a role model and inspiration. '
       + 'Stephen is an Art teacher for Plain Local Schools and an accomplished artist himself. He is exceptionally gifted in textile '
@@ -189,6 +190,7 @@ export class PartyViewerComponent implements OnInit {
   ];
 
   selectedPerson: Person;
+
 
   constructor() { }
 

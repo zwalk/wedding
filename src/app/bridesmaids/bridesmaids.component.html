@@ -1,3 +1,6 @@
-<div class="bridesmaids" id="bridesmaids">
+<div class="bridesmaids" id="bridesmaids" *ngIf="isBridesmaids == true" [@slideLeft]="getBridesmaidsState()" [ngClass]="{'bridesmaids-initial': isBridesmaids == true, 'groomsmen-initial': isBridesmaids == false}">
+    <img *ngFor="let person of people" src="{{person.imgSrc}}" [ngStyle]="{'width': getSize(person)}" (click)="select(person)"/>
+</div>
+<div class="bridesmaids" id="bridesmaids" *ngIf="isBridesmaids == false" [@slideRight]="getGroomsmenState()" [ngClass]="{'bridesmaids-initial': isBridesmaids == true, 'groomsmen-initial': isBridesmaids == false}">
     <img *ngFor="let person of people" src="{{person.imgSrc}}" [ngStyle]="{'width': getSize(person)}" (click)="select(person)"/>
 </div>
