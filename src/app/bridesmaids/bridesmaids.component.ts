@@ -87,7 +87,7 @@ export class BridesmaidsComponent implements OnInit, AfterViewInit {
     }
 
     const $animateGroomsmen = $animate.pipe(
-      filter(pageY => pageY + (window.innerHeight / 2)>= this.groomsmenHeight)
+      filter(pageY => pageY + (window.innerHeight) >= this.groomsmenHeight)
     );
 
     if (!this.isBridesmaids) {
