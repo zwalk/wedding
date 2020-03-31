@@ -70,6 +70,101 @@
     font-size: x-small;
 }
 
+.wedding-icons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.wedding-icons div {
+    border: solid 1px transparent;
+}
+
+fa-icon {
+    color: #003366;
+    font-size: 2rem;
+}
+
+.wedding-icons div p {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.wedding-icons div {
+    display: flex;
+    align-items: center;
+    flex-basis: 23%;
+    justify-content: space-around;
+    padding: 2%;
+}
+
+.wedding-icons {
+    margin-bottom: 2%;
+}
+
+.selected {
+    opacity: 0.5;
+    border: dashed 1px black !important;
+}
+
+span {
+    font-weight: bold;
+    font-size: small;
+}
+
+
+.gift-links {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    border: dashed 1px black;
+}
+
+.hotel-links {
+    display: flex;
+    justify-content: flex-end;
+    margin: o auto;
+    border: dashed 1px black;
+    width: 99%;
+}
+
+.gift-links a, .hotel-links a {
+    font-family: 'Permanent Marker', cursive;
+    font-size: small;
+}
+
+.hotel-links a {
+    padding-right: 3%;
+}
+
+.hotel-links div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 50%;
+    font-size: small;
+}
+
+.hotel-links p {
+    font-size: x-small;
+}
+
+#hotel-notice {
+    margin: 0 auto;
+    margin-bottom: 3%;
+    font-size: x-small;
+    text-align: center;
+}
+
+b {
+    font-family: 'Permanent Marker', cursive;
+}
+
+h3 {
+    text-align: center;
+    font-size: .7rem;
+}
+
 @media only screen and (min-width: 768px) {
 
     .center * {
@@ -84,12 +179,44 @@
         font-size: small;
     }
 
+    .wedding-icons div {
+        flex-basis: 18%;
+    }
+
+    .wedding-icons div p {
+        font-size: 1.5rem;
+    }
+
+    #hotel-notice {
+        font-size: medium;
+    }
+
+    span, .hotel-links p {
+        font-size: large;
+    }
+
+    .hotel-links a, .gift-links a {
+        font-size: x-large;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
 }
 
 @media only screen and (min-width: 1025px) {
 
     .center * {
         top: 10%;
+    }
+
+    .wedding-icons div:hover {
+        opacity: 0.5;
+        border: dashed 1px black;
+    }
+    
+    .icon:hover {
+        cursor: pointer;
     }
 
     .about-img-container {
@@ -135,5 +262,60 @@
 
     .about-events-gifts-container {
         opacity: 0;
+        margin-bottom: 2%;
+    }
+
+    fa-icon {
+        font-size: 4rem;
+    }
+
+    .wedding-icons div {
+        flex-basis: 10%;
+    }
+
+    .wedding-icons div p {
+        font-size: 1.3rem;
+    }
+
+    .gift-links {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 5%;
+        border: dashed 1px black;
+    }
+
+    .hotel-links {
+        display: flex;
+        justify-content: flex-end;
+        border: dashed 1px black;
+        width: 50%;
+        margin-left: 48%;
+    }
+
+    .gift-links a, .hotel-links a {
+        font-family: 'Permanent Marker', cursive;
+        font-size: 150%;
+    }
+
+    .hotel-links a {
+        padding-right: 3%;
+    }
+
+    .hotel-links div {
+        display: flex;
+        flex-direction: column;
+        padding-right: 3%;
+        align-items: center;
+        flex-basis: 50%;
+    }
+
+    #hotel-notice {
+        margin-left: 48%;
+    }
+
+    h3 {
+        font-size: 1.5rem;
     }
 }

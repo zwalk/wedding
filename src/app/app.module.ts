@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { DogsComponent } from './dogs/dogs.component';
 import { RingbearerComponent } from './ringbearer/ringbearer.component';
 import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AnimateOnScrollModule.forRoot()
+    AnimateOnScrollModule.forRoot(),
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

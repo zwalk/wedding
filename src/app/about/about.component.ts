@@ -8,6 +8,7 @@ import {
 } from '@angular/animations';
 import { throttleTime, map, filter } from 'rxjs/operators';
 import { fromEvent } from 'rxjs';
+import { faHotel, faGift, faReply } from '@fortawesome/free-solid-svg-icons';
 
 enum VisibilityState {
   Visible = 'Visible',
@@ -33,11 +34,16 @@ enum VisibilityState {
 })
 export class AboutComponent implements OnInit, AfterViewInit {
 
+  faReply = faReply;
+  faGift = faGift;
+  faHotel = faHotel;
   isIEOrEdge: boolean;
   private isShown = false;
   aboutPosition: number;
   private hasAboutPositionBeenFound = false;
   windowWidth: number;
+  isGiftsSelected: boolean;
+  isHotelsSelected: boolean;
 
   getToggle(): VisibilityState {
     return this.isShown ? VisibilityState.Visible : VisibilityState.Hidden;
@@ -84,6 +90,28 @@ export class AboutComponent implements OnInit, AfterViewInit {
 
   calculateWindowWidth() {
     this.windowWidth = window.innerWidth;
+  }
+
+  goToUrl(url) {
+    window.open(url, '_blank');
+  }
+
+  showLinks(linkType) {
+    if (linkType === 'gifts') {
+      if (this.isGiftsSelected) {
+        this.isGiftsSelected = false;
+      } else {
+        this.isGiftsSelected = true;
+        this.isHotelsSelected = false;
+      }
+    } else if (linkType === 'hotels') {
+      if (this.isHotelsSelected) {
+        this.isHotelsSelected = false;
+      } else {
+        this.isHotelsSelected = true;
+        this.isGiftsSelected = false;
+      }
+    }
   }
 
 }

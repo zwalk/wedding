@@ -10,8 +10,21 @@
         <p>Ceremony - 3:30PM @ Bryn Du Mansion<br>
             537 Jones Rd NE, Granville, OH 43023</p>
         <p>Reception to Follow</p>
-        <p>For wedding gifts, our registry can be found here:</p>
-        <a href="#">Wedding Gifts</a>
-        <a href="https://forms.gle/6FRdN2QAYK4BTdex8" target="_blank">RSVP</a>
     </div>
 </div>
+<h3>Please use <b>#DreamComeTornero</b> for any social media posts</h3>
+<div class="wedding-icons">
+    <div class="rsvp-icon icon" (click)="goToUrl('https://forms.gle/6FRdN2QAYK4BTdex8')"><fa-icon class="icon" [icon]="faReply"></fa-icon><p class="icon">RSVP</p></div>
+    <div class="gift-icon icon" (click)="showLinks('gifts')" [ngClass]="{'selected': isGiftsSelected == true}"><fa-icon class="icon" [icon]="faGift"></fa-icon><p class="icon">Gifts</p></div>
+    <div class="hotel-icon icon" (click)="showLinks('hotels')" [ngClass]="{'selected': isHotelsSelected == true}"><fa-icon class="icon" [icon]="faHotel"></fa-icon><p class="icon">Hotel</p></div>
+</div>
+<div class="gift-links" *ngIf="isGiftsSelected">
+    <a href="https://www.amazon.com/wedding/share/dreamcometornero" target="_blank">Amazon</a>
+    <a href="https://www.honeyfund.com/wedding/dreamcometornero" target="_blank">Honeyfund</a>
+    <a href="https://www.target.com/gift-registry/giftgiver?registryId=4f2ca4c3f1714b95b43ef24dabb5730e&type=WEDDING" target="_blank">Target</a>
+</div>
+<div class="hotel-links" *ngIf="isHotelsSelected">
+    <div><a href="https://www.cherryvalleyhotel.com/" target="_blank">Cherry Valley Hotel</a><p>(call to book under Tornero/Gloyd)</p><span>(740) 788-1200</span></div>
+    <div><a href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1579531594383&key=GRP&app=resvlink" target="_blank">Marriot</a><p>(Book online or call under Tornero/Gloyd)</p><span>(740) 344-1800</span></div>
+</div>
+<div id="hotel-notice" *ngIf="isHotelsSelected">*Tornero/Gloyd block held until May 20th for both hotels</div>
