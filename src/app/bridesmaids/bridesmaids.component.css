@@ -5,7 +5,6 @@
     cursor: pointer;
     justify-content: space-evenly;
     position: relative;
-    z-index: 2;
 }
 
 .bridesmaids img {
@@ -13,7 +12,6 @@
     align-self: flex-end;
     cursor: pointer;
     position: relative;
-    z-index: 2;
 }
 
 .bridesmaids img:hover {
