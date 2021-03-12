@@ -4,6 +4,7 @@
     display: flex;
     cursor: pointer;
     justify-content: space-evenly;
+    position: relative;
     z-index: 2;
 }
 
@@ -11,6 +12,7 @@
     width: 15%;
     align-self: flex-end;
     cursor: pointer;
+    position: relative;
     z-index: 2;
 }
 
