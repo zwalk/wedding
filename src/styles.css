@@ -22,9 +22,11 @@ html {
     overflow-x: hidden;
 }
 
-nav a {
-    text-decoration: none;
+.not-a-link {
     color: #003366;
+}
+
+nav a {
     cursor: pointer;
     display: block;
     padding: 20px 16px;
