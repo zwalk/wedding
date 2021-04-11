@@ -20,8 +20,11 @@
                 <li [ngClass]="{'active': currentActive === 6}">
                   <a appNavScroll>Dogs</a>  
                 </li>
+                <li [ngClass]="{'active': currentActive === 7}">
+                  <a appNavScroll>Social</a>  
+                </li>
                 <li>
-                  <a href="https://forms.gle/6FRdN2QAYK4BTdex8" target="_blank">RSVP</a>  
+                  <a id="rsvpLink" href="https://forms.gle/6FRdN2QAYK4BTdex8" target="_blank">RSVP</a>  
                 </li>
             </ul>
         <div class="hamburger" *ngIf="isOpen === false" (click)="changeOpen()">
@@ -40,6 +43,7 @@
             <a appNavScroll>Bridesmaids</a>
             <a appNavScroll>Groomsmen</a>
             <a appNavScroll>Dogs</a>
+            <a appNavScroll>Social</a>
             <a href="https://forms.gle/6FRdN2QAYK4BTdex8" target="_blank">RSVP</a>
     </div>
 </div>

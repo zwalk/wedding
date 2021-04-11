@@ -36,4 +36,8 @@ h1:after {
     h1:after {
         border-left: 18vw solid transparent;
     }
+
+    iframe {
+        height: 950px;
+    }
 }

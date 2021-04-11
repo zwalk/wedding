@@ -29,3 +29,7 @@ a:hover {
 .active a {
     color: #fff;
 }
+
+#rsvpLink {
+    text-decoration: underline;
+}
