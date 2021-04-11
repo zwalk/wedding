@@ -25,6 +25,10 @@ h1:after {
     h1:after {
         border-left: 35vw solid transparent;
     }
+    
+    iframe {
+        height: 570px;
+    }
 }
 
 @media only screen and (min-width: 1025px) {
