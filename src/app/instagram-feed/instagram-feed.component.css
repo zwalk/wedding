@@ -3,7 +3,7 @@ h1 {
     font-family: 'Permanent Marker', cursive;
     font-size: large;
     transform: rotate(-3deg);
-    width: 50%;
+    width: 60%;
     margin-bottom: 5%;
     margin-left: 5%;
 }
@@ -11,7 +11,7 @@ h1 {
 h1:after {
     content: "";
     display: block;
-    border-left: 50vw solid transparent;
+    border-left: 60vw solid transparent;
     border-top: 10px solid #242424;
     border-right: 1vw solid transparent;
    }
@@ -23,7 +23,7 @@ h1:after {
     }
 
     h1:after {
-        border-left: 35vw solid transparent;
+        border-left: 60vw solid transparent;
     }
     
     iframe {
