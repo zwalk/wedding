@@ -23,22 +23,22 @@ enum VisibilityState {
     trigger('slideLeft', [
       state(
         VisibilityState.Hidden,
-        style({transform: 'translateX(100%)'})
+        style({transform: 'translate3d(100%, 0, 0px)'})
       ),
       state(
         VisibilityState.Visible,
-        style({transform: 'translateX(0)'})
+        style({transform: 'translate3d(0, 0 , 0px)'})
       ),
       transition('* => *', animate('1750ms'))
     ]),
     trigger('slideRight', [
       state(
         VisibilityState.Hidden,
-        style({transform: 'translateX(-100%)'})
+        style({transform: 'translate3d(-100%, 0, 0px)'})
       ),
       state(
         VisibilityState.Visible,
-        style({transform: 'translateX(0)'})
+        style({transform: 'translate3d(0, 0, 0px)'})
       ),
       transition('* => *', animate('1750ms'))
     ])

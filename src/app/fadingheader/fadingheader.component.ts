@@ -85,8 +85,7 @@ onResize() {
   this.calculateScrollHeight();
 }
 
-@HostBinding('@toggle')
-get toggle(): VisibilityState {
+getToggle(): VisibilityState {
   return this.isVisible ? VisibilityState.Visible : VisibilityState.Hidden;
 }
 
