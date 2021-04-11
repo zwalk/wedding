@@ -14,6 +14,7 @@ import { DogsComponent } from './dogs/dogs.component';
 import { RingbearerComponent } from './ringbearer/ringbearer.component';
 import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { InstagramFeedComponent } from './instagram-feed/instagram-feed.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FadingheaderComponent,
     AboutComponent,
     DogsComponent,
-    RingbearerComponent
+    RingbearerComponent,
+    InstagramFeedComponent
   ],
   imports: [
     BrowserModule,
