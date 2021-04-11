@@ -33,8 +33,8 @@ export class PartyViewerComponent implements OnInit {
       + 'They cheered, played softball together and walked around the Lake. They spent every weekend at each other\'s houses. People'
       + ' used to ask them if they were twins which they always replied, yes!  Miranda was Courtney and her husband, Brandon\'s third'
       + ' wheel for a few summers. Courtney and Brandon have 2 amazing boys, Logan and Eli. Miranda and Courtney now enjoy dancing and'
-      + ' playing games when together. Miranda and Courtney both also have passions in the health care field. Courtney is going to school '
-      + 'to be a Surgical Technician. Miranda has always admired Courtney\'s boldness/ability to talk to anyone and credits some of her '
+      + ' playing games when together. Miranda and Courtney both also have passions in the health care field. Courtney is'
+      + ' a Surgical Technician. Miranda has always admired Courtney\'s boldness/ability to talk to anyone and credits some of her '
       + 'own confidence to Courtney.',
       detailSize: '37%',
       relation: '(Matron of Honor - Friend of Bride since Grade School)'
@@ -48,8 +48,8 @@ export class PartyViewerComponent implements OnInit {
       + 'driveways and ask "if that girl was home." From there they would run the streets of Hebron playing flash '
       + 'light tag, flag football and jump on the trampoline. They would spend their weekends at softball tournaments '
       + 'then each others houses where Miranda\'s dad always joked that Chelsea was their "red-headed step child." '
-      + 'Chelsea and Miranda now enjoy hanging out with family together and eating Chinese food. Chelsea and her long '
-      + 'time boyfriend Wes have a little boy, Colt. Chelsea is a cancer survivor and is one of the strongest people '
+      + 'Chelsea and Miranda now enjoy hanging out with family together and eating Chinese food. Chelsea and her fiancé '
+      + 'Wes have a little boy, Colt. Chelsea is a cancer survivor and is one of the strongest people '
       + 'Miranda has ever met. ',
       detailSize: '25%',
       relation: '(Bridesmaid - Friend of Bride since Grade School)'
@@ -118,7 +118,7 @@ export class PartyViewerComponent implements OnInit {
       + 'good mutual friend Ryan Aguire talked them both into running cross-country. Saki and Chris then both attended The Ohio State '
       + 'University together became even closer and bonded over a love for blues music and vinyl records. After undergrad the two were '
       + 'roommates while Saki was in law school and Chris started his nursing career in Columbus. Saki is now a Lawyer living in '
-      + 'Columbus Ohio with his long time girlfriend Marie Ragias. Chris and Saki make efforts to see one another whenever they are '
+      + 'Columbus Ohio with his fiancé Marie Ragias. Chris and Saki make efforts to see one another whenever they are '
       + 'both in Columbus and have plans to go to Memphis Tennessee and Austin Texas together soon to listen to live music.',
       detailSize: '32%',
       relation: '(Groomsman, Grade school friend of the Groom)'
@@ -157,7 +157,7 @@ export class PartyViewerComponent implements OnInit {
       + 'and hung out constantly with roommates Mike, Rob, Nate and Pete. The group devised a plan to sell their yard out as parking '
       + 'spaces for the home football games which funded a few house parties every year. A few years after college Zach was visiting '
       + 'Chris after he had bought his house in Columbus. Chris talked Zach into moving back to Columbus to be his roommate once again '
-      + 'and they are both still living there today. Zach has also just started a great new career in Coding with Nationwide in Columbus.',
+      + 'and they lived together for nearly another 5 years. Zach has also switched to a great new career in coding with Nationwide.',
       detailSize: '35%',
       relation: '(Bestman, Grade school friend of Groom, Long time roommate of Bride and Groom)'
     },
@@ -182,8 +182,8 @@ export class PartyViewerComponent implements OnInit {
       + 'Colorado. Cliff sat across from Chris and other future groomsmen Tyler Higgins and bonded over that long long fun ride. '
       + 'Chris was soon at Cliffs house nearly every weekend and had became good friends with Cliff and all his roommates in his '
       + 'college house "The Church". Cliff Still visits Columbus from time to time to watch Ohio State football and see Chris and '
-      + 'Miranda. However, he now resides with his beautiful wife Erica in Portland, OR. Chris and Miranda hope to visit their new '
-      + 'home soon!',
+      + 'Miranda. However, he now resides with his beautiful wife Erica and their new baby, Avery, in Portland, OR. Chris and Miranda '
+      + 'hope to visit their new home soon!',
       detailSize: '29%',
       relation: '(Groomsman, College friend of the Groom)'
     }
