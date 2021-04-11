@@ -7,8 +7,6 @@ import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angula
 })
 export class InstagramFeedComponent implements OnInit {
 
-  @ViewChild('instagramiframe', {static: false}) iframe: ElementRef
-
   constructor() { }
 
   ngOnInit() {
