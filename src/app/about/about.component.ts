@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, HostListener } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { faHotel, faGift, faReply } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-about',
@@ -18,7 +18,9 @@ export class AboutComponent implements OnInit, AfterViewInit {
 
   constructor() {}
 
-  ngAfterViewInit() {}
+  ngAfterViewInit() {
+    document.querySelector('path').classList.add('icon');
+  }
 
   ngOnInit() {
     this.isIEOrEdge = /msie\s|trident\/|edge\//i.test(window.navigator.userAgent);

@@ -114,11 +114,58 @@ span {
 
 .gift-links {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     margin-bottom: 5%;
     border: dashed 1px black;
+}
+
+.gift-links a, .gift-links img {
+    cursor: pointer;
+}
+
+#venmo-information-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#gift-subtitle {
+    font-size: xx-small;
+    font-weight: normal;
+    display: inline-block;
+}
+
+#venmo-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-basis: 60%;
+}
+
+#venmo-text-container h2 {
+    font-size: medium;
+}
+
+#venmo-text-container p {
+    font-size: small;
+}
+
+#chris-venmo-link {
+    font-size: large;
+}
+
+#venmo-img-container {
+    flex-basis: 25%;
+}
+
+.registry-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .hotel-links {
@@ -166,6 +213,11 @@ h3 {
     font-size: .7rem;
 }
 
+.icon {
+    cursor: pointer !important;
+}
+
+
 @media only screen and (min-width: 768px) {
 
     .center * {
@@ -203,6 +255,26 @@ h3 {
     h3 {
         font-size: 1.4rem;
     }
+
+    #venmo-text-container {
+        flex-basis: 50%;
+    }
+
+    #chris-venmo-link {
+        font-size: 150%;
+    }
+
+    #venmo-text-container h2 {
+        font-size: x-large;
+    }
+
+    #venmo-text-container p {
+        font-size: medium;
+    }
+
+    #gift-subtitle {
+        font-size: x-small;
+    }
 }
 
 @media only screen and (min-width: 1025px) {
@@ -214,10 +286,6 @@ h3 {
     .wedding-icons div:hover {
         opacity: 0.5;
         border: dashed 1px black;
-    }
-    
-    .icon:hover {
-        cursor: pointer;
     }
 
     .about-img-container {

@@ -19,12 +19,24 @@
     <div class="hotel-icon icon" (click)="showLinks('hotels')" [ngClass]="{'selected': isHotelsSelected == true}"><fa-icon class="icon" [icon]="faHotel"></fa-icon><p class="icon">Hotel</p></div>
 </div>
 <div class="gift-links" *ngIf="isGiftsSelected">
-    <a href="https://www.amazon.com/wedding/share/dreamcometornero" target="_blank">Amazon</a>
-    <a href="https://www.honeyfund.com/wedding/dreamcometornero" target="_blank">Honeyfund</a>
-    <a href="https://www.target.com/gift-registry/giftgiver?registryId=4f2ca4c3f1714b95b43ef24dabb5730e&type=WEDDING" target="_blank">Target</a>
+    <div id="venmo-information-container">
+        <a id="venmo-img-container" href="https://venmo.com/code?user_id=2035673125093376259" target="_blank"><img src="../../assets/img/chrisVenmo.png" alt="Chris' venmo QR code"></a>
+        <div id="venmo-text-container">
+            <a id="chris-venmo-link" href="https://venmo.com/code?user_id=2035673125093376259" target="_blank">@Christopher-Tornero</a>
+            <h2>Money for concert tickets</h2>
+            <p>Scan the QR code with your phone or follow the link above to Venmo Chris and Miranda a cash gift
+                <span id="gift-subtitle">* Venmo payments can only be made through the Venmo mobile app, not available at Venmo.com</span>
+            </p>
+        </div>
+    </div>
+    <div class="registry-links">
+        <a href="https://www.amazon.com/wedding/share/dreamcometornero" target="_blank">Amazon</a>
+        <a href="https://www.honeyfund.com/wedding/dreamcometornero" target="_blank">Honeyfund</a>
+        <a href="https://www.target.com/gift-registry/giftgiver?registryId=4f2ca4c3f1714b95b43ef24dabb5730e&type=WEDDING" target="_blank">Target</a>
+    </div>
 </div>
 <div class="hotel-links" *ngIf="isHotelsSelected">
     <div><a href="https://www.cherryvalleyhotel.com/" target="_blank">Cherry Valley Hotel</a><p>(call to book under Tornero/Gloyd)</p><span>(740) 788-1200</span></div>
     <div><a href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1579531594383&key=GRP&app=resvlink" target="_blank">Marriot</a><p>(Book online or call under Tornero/Gloyd)</p><span>(740) 344-1800</span></div>
 </div>
-<div id="hotel-notice" *ngIf="isHotelsSelected">*Tornero/Gloyd block held until May 20th for both hotels</div>
+<div id="hotel-notice" *ngIf="isHotelsSelected">*Tornero/Gloyd block held until May 13th for both hotels</div>
